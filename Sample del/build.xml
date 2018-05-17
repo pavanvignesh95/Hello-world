@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--New Build File-->
 
-<project default="run git-push">
+<project default="run_git-add">
 
 <!--GIT COMMAND LOG-->
 <macrodef name="git">
@@ -70,7 +70,7 @@
 			</git>
 		</sequential>
 	</macrodef>
-<!--test fail-->
+<!--test fail
     <macrodef name="test">
 		<attribute name = "path" default="hello" />
 		<sequential>
@@ -83,6 +83,7 @@
 			</fail>
 		</sequential>
 	</macrodef>
+	-->
 
 <target name="run_git-init">
 <git-init repository="Hello-World"/>
@@ -90,21 +91,20 @@
 </target> 	
 
 <target name="run_git-add">
-<!-- git-add path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\sample\retrieveUnpackaged1\classes" target1="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-world"/ -->
-<!--<git-add target1="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\sample\unpackaged\Hello_world"/>-->
+
 <git-add path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\sample\retrieveUnpackaged1\classes" target1="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World"/>
 <echo message="add done" />
 </target> 
 
 <target name="run_git-commit" >
-<git-commit path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World" message=""/>
+<git-commit path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World" message="-am ${gt.commitMessage}"/>
 
 <echo message="commit done"/>
 </target>
 
 <target name="run git-push" >
 <git-push path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World" />
-<git-push branch="origin master" /> 
+<git-push branch="master" /> 
 <git-push head="master" />
 <echo message="files pushed" />
 
