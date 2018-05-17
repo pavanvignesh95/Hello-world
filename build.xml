@@ -120,7 +120,7 @@
 	</args>
 
 </git>
-
+<git command="push" />
 </target>
 
 <!--<target name="run_git-add">
@@ -137,13 +137,14 @@
 </target>
 -->
 
-<target name="run git-push" >
+<!--<target name="run git-push" >
 <git-push path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World" />
-<git-push branch="master" /> 
-<git-push head="master" />
+<git-push branch="master" head="master"/> 
 <echo message="files pushed" />
 
-</target>
+
+
+</target>-->
 
 	</project>
 
