@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--New Build File-->
 
-<project default="Git-add">
+<project default="run git-push">
 
 <!--GIT COMMAND LOG-->
 <macrodef name="git">
@@ -120,7 +120,11 @@
 	</args>
 
 </git>
-<git command="push" />
+<!--<git command="push">
+<args>
+<arg value=""
+</args> -->
+
 </target>
 
 <!--<target name="run_git-add">
@@ -137,14 +141,13 @@
 </target>
 -->
 
-<!--<target name="run git-push" >
+<target name="run git-push" >
 <git-push path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World" />
 <git-push branch="master" head="master"/> 
 <echo message="files pushed" />
 
 
-
-</target>-->
+</target>
 
 	</project>
 
