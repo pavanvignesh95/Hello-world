@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--New Build File-->
 
-<project default="run git-push">
+<project default="Git-add-commit">
 
 <!--GIT COMMAND LOG-->
 <macrodef name="git">
@@ -18,7 +18,7 @@
 		</sequential>
 	</macrodef>
 
-	
+
 <!--GIT INIT-->	
 	<macrodef name = "git-init">
 		<attribute name = "repository" />
@@ -94,7 +94,7 @@
 </target> 	
 
 
-<target name="Git-add" description="Commits all changes to version git">
+<target name="Git-add-commit" description="Commits all changes to version git">
 
 
 
@@ -120,12 +120,13 @@
 	</args>
 
 </git>
+</target>
 <!--<git command="push">
 <args>
-<arg value=""
+<arg value="{"
 </args> -->
 
-</target>
+
 
 <!--<target name="run_git-add">
 
@@ -142,8 +143,7 @@
 -->
 
 <target name="run git-push" >
-<git-push path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World" />
-<git-push branch="master" head="master"/> 
+<git-push path="C:\ANT MIGRATION\mig tool full\salesforce_ant_41.0\Hello-World" branch="HEAD" head="master"/>
 <echo message="files pushed" />
 
 
