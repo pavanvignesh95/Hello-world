@@ -115,7 +115,7 @@
 
 	<args>
 
-		<arg value="-am ${gt.commitMessage}" />
+		<arg value="-m ${gt.commitMessage}" />
 
 	</args>
 
